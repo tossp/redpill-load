@@ -1,5 +1,5 @@
 {
-  "pocopico.mpt3sas": "https://raw.githubusercontent.com/tossp/rp-ext/master/mpt3sas/rpext-index.json",
+  "mpt3sas": "https://raw.githubusercontent.com/tossp/rp-ext/master/mpt3sas/rpext-index.json",
   "thethorgroup.virtio": "https://raw.githubusercontent.com/RedPill-TTG/redpill-virtio/master/rpext-index.json",
   "thethorgroup.boot-wait": "https://raw.githubusercontent.com/RedPill-TTG/redpill-boot-wait/master/rpext-index.json"
 }
