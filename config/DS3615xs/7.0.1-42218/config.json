@@ -1,24 +1,22 @@
 {
   "os": {
     "id": "ds3615xs_42218",
-    "pat_url": "https://global.download.synology.com/download/DSM/release/7.0.1/42218/DSM_DS3615xs_42218.pat",
-    "sha256": "0813a94cabecb760fd419dc6415ef993d6cd439f8b4e4492c55aab52b2314d9a"
+    "pat_url": "https://cndl.synology.cn/download/DSM/release/7.0.1/42218/DSM_DS3615xs_42218.pat",
+    "sha256": "dddd26891815ddca02d0d53c1d42e8b39058b398a4cc7b49b80c99f851cf0ef7"
   },
-
   "files": {
     "zlinux": {
       "name": "zImage",
-      "sha256": "bbfe7c63507232665a67db02a2f3d257fd2c1b7576d26432778e0cf9a2a70924"
+      "sha256": "d29b695612710376734cb5c5b5ae4f2d8afc49ffd640387e1c86010f6c7d2c8a"
     },
     "ramdisk": {
       "name": "rd.gz",
-      "sha256": "481c19f09f28f939222b69f4f3714843a80a0cc7aa0ec432da1e897083501ef2"
+      "sha256": "4c90c3c7ee25b5fcc651552e80a9364d22823c863c834c5f43e3344a3a68af78"
     },
     "vmlinux": {
-      "sha256": "dd550fe7b6e53290b60475bfc299df5070ccd52c41bc739b6f7090c726cc1a0a"
+      "sha256": "69569a0703fcd0a3a492dd1066eb6c3b90ea41e5793a5eac960d27b6f3afa916"
     }
   },
-
   "patches": {
     "_comment": ".bsp patches are applied to FILES using bspatch(1); .patch are applied to DIRECTORIES using patch(1)",
     "zlinux": [
@@ -26,8 +24,8 @@
     ],
     "ramdisk": [
       "@@@COMMON@@@/ramdisk-001-disable-root-pwd.patch",
-      "@@@COMMON@@@/v7.0.1/ramdisk-002-init-script.patch",
-      "@@@COMMON@@@/v7.0.1/ramdisk-003-post-init-script.patch"
+      "@@@COMMON@@@/ramdisk-002-init-script-NEW-name.patch",
+      "@@@COMMON@@@/ramdisk-003-post-init-script-UPPER.patch"
     ]
   },
   "synoinfo": {
@@ -49,7 +47,6 @@
       "pid": "0x0001",
       "mac1": "",
       "netif_num": 1,
-
       "syno_hw_version": "DS3615xs",
       "syno_hdd_powerup_seq": 0,
       "HddHotplug": 0,
@@ -63,7 +60,7 @@
       "earlycon": "uart8250,io,0x3f8,115200n8"
     },
     "menu_entries": {
-      "RedPill DS3615xs v7.0.1-42218 (USB, Verbose)": {
+      "RedPill DS3615xs v7.0.1-42218 Beta (USB, Verbose)": {
         "options": [
           "savedefault",
           "set root=(hd0,msdos1)",
@@ -79,7 +76,7 @@
           "log_buf_len": "32M"
         }
       },
-      "RedPill DS3615xs v7.0.1-42218 (SATA, Verbose)": {
+      "RedPill DS3615xs v7.0.1-42218 Beta (SATA, Verbose)": {
         "options": [
           "savedefault",
           "set root=(hd0,msdos1)",
@@ -111,11 +108,9 @@
     },
     "bootp2_copy": {
       "@@@PAT@@@/GRUB_VER": "GRUB_VER",
-      "@@@COMMON@@@/EFI": "EFI",
       "@@@PAT@@@/grub_cksum.syno": "grub_cksum.syno",
       "@@@PAT@@@/rd.gz": "rd.gz",
       "@@@PAT@@@/zImage": "zImage"
     }
   }
 }
-
